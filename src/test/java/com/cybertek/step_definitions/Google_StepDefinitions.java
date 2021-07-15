@@ -27,6 +27,18 @@ public class Google_StepDefinitions {
         String expectedInTitle = "Apple";
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
     }
+    @Then("User should see title is Google")
+    public void user_should_see_title_is_google() {
+        // Write code here that turns the phrase above into concrete actions
+         String actualTitle=Driver.getDriver().getTitle();
+         String expectedTitle = "Google";
+         Assert.assertTrue(actualTitle.equals(expectedTitle));
+
+    }
 
 
+    @When("User searches for {string}")
+    public void userSearchesFor(String arg0) {
+
+    }
 }
