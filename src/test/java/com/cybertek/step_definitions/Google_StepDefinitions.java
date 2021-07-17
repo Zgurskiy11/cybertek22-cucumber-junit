@@ -39,6 +39,7 @@ public class Google_StepDefinitions {
 
     @When("User searches for {string}")
     public void userSearchesFor(String arg0) {
-
+        GoogleSearchPage googleSearchPage = new GoogleSearchPage();
+        googleSearchPage.searchBar.sendKeys(arg0 + Keys.ENTER);
     }
 }

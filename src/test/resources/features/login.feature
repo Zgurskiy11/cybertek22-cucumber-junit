@@ -10,8 +10,7 @@ Feature: Library app login feature
 
 @librarian
   Scenario: Login as librarian
-    # for comments we use hashtags
-
+    # for comments we use hashtags'
     When user enters librarian username
     And user enters librarian password
     Then user should see the dashboard
