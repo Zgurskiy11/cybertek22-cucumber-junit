@@ -25,6 +25,8 @@ public class Hooks {
             byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);//casting our driver type., .getScreenshotAs method coming from different interface
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
+        System.out.println("AFTER--Teardown steps are being applied...");
+        Driver.closeDriver();
     }
 
     @BeforeStep

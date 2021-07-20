@@ -42,14 +42,14 @@ public class Wiki_StepDefinitions {
     public void userSeesIsInTheWikiTitle(String arg0) {
         String exp = arg0 + " - Wikipedia";
         String act = Driver.getDriver().getTitle();
-
+        Assert.assertEquals(exp,act);
     }
 
     @Then("User sees {string} is in the main header")
     public void userSeesIsInTheMainHeader(String arg0) {
         String exp = arg0;//can pass arg0 directly into assertions
         String act = wikiSearchPage.mainHeader.getText();
-        Assert.assertEquals(act, exp);
+        Assert.assertEquals(exp,act);
 
 
 
